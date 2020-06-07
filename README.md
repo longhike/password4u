@@ -36,7 +36,7 @@ Javascript
 ## Contribution Guidlines 
 ​
 Direct link to site:
-https://longhike.github.io/hwTwo/
+https://longhike.github.io/hwThree/
 ​
 ### License
 ​

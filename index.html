@@ -11,9 +11,9 @@
         <link rel="stylesheet" type="text/css" href="./reset.css">
     <!-- bootstrap css/js/jquery  -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
     <!-- sam css (style.css) -->
         <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
@@ -32,7 +32,7 @@
 
                         <h1 class="card-title">Sam's Password Generator</h1>
 
-                        <h5 id="titleSam">Enter the number of characters for your password:</h5>
+                        <h5>Enter the number of characters for your password:</h5>
                         
                         <form>
 
@@ -43,8 +43,8 @@
                               
                               <div class="col-4">
                                 <label class="sr-only" for="inlineFormInput">Characters</label>
-                                <!-- NEED ID HERE, this will be the number input for number of indexes in array -->
-                                <input type="number" class="form-control mb-2" placeholder="0">
+                                <!-- ID ADDED #passLength this will be the number input for number of indexes in array -->
+                                <input type="number" class="form-control mb-2" id="passLength" placeholder="0">
                               </div>
 
                               <div class="col-4">
@@ -53,30 +53,27 @@
                             </div>
 
                         </form>
-
-                        <h5 id="titleSam">Select your password's parameters using the dropdown below:</h5>
-                         
-                        <div class="btn-group">
-                            <!-- NEED ID HERE, this needs to update with the selection from the dropdown -->
-                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Select your parameters
-                            </button>
-                            <!-- NEED ID HERE, and in each of the drop-down items - these need to (1) populate in the button HTML as a string, and (2) trigger the proper array generator -->
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Letters</a>
-                                <a class="dropdown-item" href="#">Numbers</a>
-                                <a class="dropdown-item" href="#">Letters, Numbers</a>
-                                <a class="dropdown-item" href="#">Letters, Numbers, Special Characters</a>
+                        <h5>Select your password's parameters using the dropdown below:</h5>
+                        <form>    
+                            <div class="form-group">
+                                <select class="form-control" id="selectSam">
+                                    <option value="dropLtr">Letters</option>
+                                    <option value="dropNum">Numbers</option>
+                                    <option value="dropLtrNum">Letters, Numbers</option>
+                                    <option value="dropLtrNumChar">Letters, Numbers, Special Characters</option>
+                                </select>
                             </div>
+                        </form>
 
-                        </div>
-                        <!-- This is #genPassword, the generated password will replace this text-->
                         <p class="card-text"></p> 
+
                         <!-- ID ADDED #submitSam - this is the button event that will trigger the generator to run: pull the number of characters as array length, use the input in parameters as to trigger the correct function/variable, and will alert the password to the browser -->
                         <button type="button" class="btn btn-primary" id="submitSam">
                             Generate Passcode
                         </button>
 
+                    </div>
+                    
                 </div>
 
             </div>

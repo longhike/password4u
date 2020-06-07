@@ -16,42 +16,38 @@ submitSam.addEventListener("click", function() {
   // to get parameter selection
   var getParam = paramSamMain.options[paramSamMain.selectedIndex].value;
     console.log(getParam);
+
   // if function to get the proper alert given parameter selection
+
   // if selection is letters only:
   if (getParam.value = "dropLtr") {
     // take the string of all letter options and splits it into an array
-    var splitLtr = choiceLtr.split("");
-      console.log(splitLtr);
-      var ltrPass = splitLtr[Math.floor(Math.random()) * splitLtr.length];
-      alert(ltrPass.toString);
-
+    var splitLtr = choiceLtr.split(""); // this splits the string into an array, from which I can select password characters
+      console.log(splitLtr); // logs it to the console as an array, showing this worked.
+      // in here, I need to take the array and (1) add a for loop that loops number of times equal to the character input, and (2) take the returns of that loop into a new a ray, thats (3) combined into a string alerted to the browser.
    }
-    
   // if selection is numbers only:
   else if (getParam.value = "dropNum") {
-
+    // take the string of all number options and splits it into an array
+    var splitNum = choiceNum.split(""); // this splits the string into an array, from which I can select password characters
+      console.log(splitNum); // does NOT log it to the console - splitNum is returning splitLtr
+      // in here, I need to take the array and (1) add a for loop that loops number of times equal to the character input, and (2) take the returns of that loop into a new a ray, thats (3) combined into a string alerted to the browser.
   }
   // if selection is letters and numbers:
   else if (getParam.value = "dropLtrNum") {
-
+    // take the string of letter/number options and splits it into an array
+    var splitLtrNum = choiceLtrNum.split(""); // this splits the string into an array, from which I can select password characters
+      console.log(splitLtrNum); // does NOT log it to the console - splitLtrNum is returning splitLtr
+      // in here, I need to take the array and (1) add a for loop that loops number of times equal to the character input, and (2) take the returns of that loop into a new a ray, thats (3) combined into a string alerted to the browser.
   }
-  // if the selection is letters, numbers and 
+  // if the selection is letters, numbers and characters:
   else if (gegParam.value = "dropLtrNumChar"){
-
+    // take the string of letter/number/character options and splits it into an array
+    var splitLtrNumChar = choiceLtrNumChar.split(""); // this splits the string into an array, from which I can select password characters
+      console.log(splitLtrNumChar); // does NOT log it to the console - splitLtrNumChar is returning splitLtr
+      // in here, I need to take the array and (1) add a for loop that loops number of times equal to the character input, and (2) take the returns of that loop into a new a ray, thats (3) combined into a string alerted to the browser.
   }
-
-  // alert("omg, the button works!");
+  // to show the button works
+  alert("omg, the button works!");
 });
-
-// ex function to substring
-
-// function myFunction() {
-//     var str = "Hello world!";
-//     var res = str.substring(0, 10);
-//     document.getElementById("demo").innerHTML = res;
-//   }
-
-
-// console.log(choiceLtrNumChar.split(""));
-// console.log(typeof numChars);
  

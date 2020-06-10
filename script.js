@@ -12,7 +12,7 @@ var paramSamMain = document.querySelector("#selectSam");
 submitSam.addEventListener("click", function() {
   // to get number of characters
   var getChars = parseInt(numChars.value);
-    console.log(typeof getChars)
+    console.log(typeof getChars);
   // to get parameter selection
   var getParam = paramSamMain.options[paramSamMain.selectedIndex].value;
     console.log(getParam);
@@ -20,34 +20,50 @@ submitSam.addEventListener("click", function() {
   // if function to get the proper alert given parameter selection
 
   // if selection is letters only:
-  if (getParam.value = "dropLtr") {
+  if (getParam === "dropLtr") {
     // take the string of all letter options and splits it into an array
-    var splitLtr = choiceLtr.split(""); // this splits the string into an array, from which I can select password characters
-      console.log(splitLtr); // logs it to the console as an array, showing this worked.
-      // in here, I need to take the array and (1) add a for loop that loops number of times equal to the character input, and (2) take the returns of that loop into a new a ray, thats (3) combined into a string alerted to the browser.
-   }
+    var splitLtr = choiceLtr.split(""); // this splits the string into an array, from which I can select password characters;
+    var password = [];
+    for (i = 0; i < getChars; i++) {
+      password.push(splitLtr[Math.floor(Math.random() * 52)])
+    };
+  console.log(password.join(""));
+  alert("Your password is " + password.join(""));
+}
+    // alert("Your password is " + splitLtr);
   // if selection is numbers only:
-  else if (getParam.value = "dropNum") {
+  else if (getParam === "dropNum") {
     // take the string of all number options and splits it into an array
     var splitNum = choiceNum.split(""); // this splits the string into an array, from which I can select password characters
-      console.log(splitNum); // does NOT log it to the console - splitNum is returning splitLtr
-      // in here, I need to take the array and (1) add a for loop that loops number of times equal to the character input, and (2) take the returns of that loop into a new a ray, thats (3) combined into a string alerted to the browser.
+    var password = [];
+    for (i = 0; i < getChars; i++) {
+      password.push(splitNum[Math.floor(Math.random() * 10)])
+    }
+    console.log(password.join(""));
+    alert("Your password is " + password.join(""));
+
   }
   // if selection is letters and numbers:
-  else if (getParam.value = "dropLtrNum") {
+  else if (getParam === "dropLtrNum") {
     // take the string of letter/number options and splits it into an array
     var splitLtrNum = choiceLtrNum.split(""); // this splits the string into an array, from which I can select password characters
-      console.log(splitLtrNum); // does NOT log it to the console - splitLtrNum is returning splitLtr
-      // in here, I need to take the array and (1) add a for loop that loops number of times equal to the character input, and (2) take the returns of that loop into a new a ray, thats (3) combined into a string alerted to the browser.
+    var password = [];
+    for (i = 0; i < getChars; i++) {
+      password.push(splitNum[Math.floor(Math.random() * 62)]);
+    }
+    console.log(password.join(""));
+    alert ("Your password is " + password.join(""));
   }
   // if the selection is letters, numbers and characters:
-  else if (gegParam.value = "dropLtrNumChar"){
+  else if (getParam === "dropLtrNumChar") {
     // take the string of letter/number/character options and splits it into an array
     var splitLtrNumChar = choiceLtrNumChar.split(""); // this splits the string into an array, from which I can select password characters
-      console.log(splitLtrNumChar); // does NOT log it to the console - splitLtrNumChar is returning splitLtr
-      // in here, I need to take the array and (1) add a for loop that loops number of times equal to the character input, and (2) take the returns of that loop into a new a ray, thats (3) combined into a string alerted to the browser.
+    var password = [];
+    for (i = 0; i < getChars; i++) {
+      password.push(splitLtrNumChar[Math.floor(Math.random() * 73)]);
+    }
+    console.log(password.join(""));
+    alert ("Your password is " + password.join(""));
   }
-  // to show the button works
-  alert("omg, the button works!");
 });
  

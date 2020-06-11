@@ -16,8 +16,7 @@ None needed besides an up-to-date web browser.
 
 ## Known Bugs:
 
-1. Parameter variable (getParam) doesn't update with selections other than the first.
-2. Can't figure out how to actually alert the password. I'm having trouble with the logic sequence for the Math.random function and the for loop using the character length input as the loop length. I also then need to convert the loop-return back into a sring, and then alert it.
+No known bugs.
 
 ## Support & Contact details:
 

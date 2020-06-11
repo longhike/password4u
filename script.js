@@ -25,11 +25,11 @@ submitSam.addEventListener("click", function() {
     var splitLtr = choiceLtr.split(""); // this splits the string into an array, from which I can select password characters;
     var password = [];
     for (i = 0; i < getChars; i++) {
-      password.push(splitLtr[Math.floor(Math.random() * 52)])
+      password.push(splitLtr[Math.floor(Math.random() * 52) + 1])
     };
   console.log(password.join(""));
   alert("Your password is " + password.join(""));
-}
+  }
     // alert("Your password is " + splitLtr);
   // if selection is numbers only:
   else if (getParam === "dropNum") {
@@ -37,7 +37,7 @@ submitSam.addEventListener("click", function() {
     var splitNum = choiceNum.split(""); // this splits the string into an array, from which I can select password characters
     var password = [];
     for (i = 0; i < getChars; i++) {
-      password.push(splitNum[Math.floor(Math.random() * 10)])
+      password.push(splitNum[Math.floor(Math.random() * 10) + 1])
     }
     console.log(password.join(""));
     alert("Your password is " + password.join(""));
@@ -49,7 +49,7 @@ submitSam.addEventListener("click", function() {
     var splitLtrNum = choiceLtrNum.split(""); // this splits the string into an array, from which I can select password characters
     var password = [];
     for (i = 0; i < getChars; i++) {
-      password.push(splitNum[Math.floor(Math.random() * 62)]);
+      password.push(splitLtrNum[Math.floor(Math.random() * 62) + 1]);
     }
     console.log(password.join(""));
     alert ("Your password is " + password.join(""));
@@ -60,10 +60,11 @@ submitSam.addEventListener("click", function() {
     var splitLtrNumChar = choiceLtrNumChar.split(""); // this splits the string into an array, from which I can select password characters
     var password = [];
     for (i = 0; i < getChars; i++) {
-      password.push(splitLtrNumChar[Math.floor(Math.random() * 73)]);
+      password.push(splitLtrNumChar[Math.floor(Math.random() * 73) + 1]);
     }
     console.log(password.join(""));
     alert ("Your password is " + password.join(""));
   }
+  
 });
  

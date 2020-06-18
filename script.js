@@ -29,10 +29,10 @@ submitSam.addEventListener("click", function() {
     };
     console.log(password.join(""));
     if (getChars < 8) {
-      alert("Your password must be greater than 8 characters long.")
+      alert("Your password cannot be fewer than 8 characters long.")
     }
     else if (getChars > 128) {
-      alert("Your password must be less than 128 characters long.")
+      alert("Your password cannot be more than 128 characters long.")
     }
     else {
     alert("Your password is " + password.join(""));
@@ -48,10 +48,10 @@ submitSam.addEventListener("click", function() {
     }
     console.log(password.join(""));
     if (getChars < 8) {
-      alert("Your password must be greater than 8 characters long.")
+      alert("Your password cannot be fewer than 8 characters long.")
     }
     else if (getChars > 128) {
-      alert("Your password must be less than 128 characters long.")
+      alert("Your password cannot be more than 128 characters long.")
     }
     else {
     alert("Your password is " + password.join(""));
@@ -67,10 +67,10 @@ submitSam.addEventListener("click", function() {
     }
     console.log(password.join(""));
     if (getChars < 8) {
-      alert("Your password must be greater than 8 characters long.")
+      alert("Your password cannot be fewer than 8 characters long.")
     }
     else if (getChars > 128) {
-      alert("Your password must be less than 128 characters long.")
+      alert("Your password cannot be more than 128 characters long.")
     }
     else {
     alert("Your password is " + password.join(""));
@@ -86,10 +86,10 @@ submitSam.addEventListener("click", function() {
     }
     console.log(password.join(""));
     if (getChars < 8) {
-      alert("Your password must be greater than 8 characters long.")
+      alert("Your password cannot be fewer than 8 characters long.")
     }
     else if (getChars > 128) {
-      alert("Your password must be less than 128 characters long.")
+      alert("Your password cannot be more than 128 characters long.")
     }
     else {
     alert("Your password is " + password.join(""));

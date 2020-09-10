@@ -1,3 +1,10 @@
+var choice = {
+  letter: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  number: "0123456789",
+  letnum: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+  letnumchar: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?@#$%^&_"
+}
+
 // This is the global variable set with the different word parameters
 var choiceLtr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var choiceNum = "0123456789";
@@ -5,96 +12,74 @@ var choiceLtrNum = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567
 var choiceLtrNumChar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?@#$%^&_";
 // This is the global variable set containing the input for the number of characters and the submit button
 var numChars = document.querySelector("#passLength");
-var submitSam = document.querySelector("#submitSam");
+var submBtn = document.querySelector("#_submit");
 // This is the global variable containing the parameter drop-down
-var paramSamMain = document.querySelector("#selectSam"); 
+var passparam = document.getElementById("_select"); 
 
-submitSam.addEventListener("click", function() {
+var warning = document.getElementById('warning')
+var result = document.getElementById('_result')
+
+var password = [];
+
+submBtn.addEventListener("click", function() {
+  clearDivs()
   // to get number of characters
   var getChars = parseInt(numChars.value);
-    console.log(typeof getChars);
-  // to get parameter selection
-  var getParam = paramSamMain.options[paramSamMain.selectedIndex].value;
-    console.log(getParam);
 
-  // if function to get the proper alert given parameter selection
+  // to get parameter selection
+  var getParam = passparam.options[passparam.selectedIndex].value;
 
   // if selection is letters only:
   if (getParam === "dropLtr") {
-    // take the string of all letter options and splits it into an array
-    var splitLtr = choiceLtr.split(""); // this splits the string into an array, from which I can select password characters;
-    var password = [];
-    for (i = 0; i < getChars; i++) {
-      password.push(splitLtr[Math.floor(Math.random() * 52)])
-    };
+    doSplit(getChars, choice.letter)
     console.log(password.join(""));
-    if (getChars < 8) {
-      alert("Your password cannot be fewer than 8 characters long.")
-    }
-    else if (getChars > 128) {
-      alert("Your password cannot be more than 128 characters long.")
-    }
-    else {
-    alert("Your password is " + password.join(""));
-    }
   }
   // if selection is numbers only:
   else if (getParam === "dropNum") {
-    // take the string of all number options and splits it into an array
-    var splitNum = choiceNum.split(""); // this splits the string into an array, from which I can select password characters
-    var password = [];
-    for (i = 0; i < getChars; i++) {
-      password.push(splitNum[Math.floor(Math.random() * 10)])
-    }
+    doSplit(getChars, choice.number)
     console.log(password.join(""));
-    if (getChars < 8) {
-      alert("Your password cannot be fewer than 8 characters long.")
-    }
-    else if (getChars > 128) {
-      alert("Your password cannot be more than 128 characters long.")
-    }
-    else {
-    alert("Your password is " + password.join(""));
-    }
   }
   // if selection is letters and numbers:
   else if (getParam === "dropLtrNum") {
-    // take the string of letter/number options and splits it into an array
-    var splitLtrNum = choiceLtrNum.split(""); // this splits the string into an array, from which I can select password characters
-    var password = [];
-    for (i = 0; i < getChars; i++) {
-      password.push(splitLtrNum[Math.floor(Math.random() * 62)]);
-    }
+    doSplit(getChars, choice.letnum)
     console.log(password.join(""));
-    if (getChars < 8) {
-      alert("Your password cannot be fewer than 8 characters long.")
-    }
-    else if (getChars > 128) {
-      alert("Your password cannot be more than 128 characters long.")
-    }
-    else {
-    alert("Your password is " + password.join(""));
-    }
   }
   // if the selection is letters, numbers and characters:
   else if (getParam === "dropLtrNumChar") {
-    // take the string of letter/number/character options and splits it into an array
-    var splitLtrNumChar = choiceLtrNumChar.split(""); // this splits the string into an array, from which I can select password characters
-    var password = [];
-    for (i = 0; i < getChars; i++) {
-      password.push(splitLtrNumChar[Math.floor(Math.random() * 73)]);
-    }
+    doSplit(getChars, choice.letnumchar)
     console.log(password.join(""));
-    if (getChars < 8) {
-      alert("Your password cannot be fewer than 8 characters long.")
+  }
+  doPassword(getChars)
+});
+
+function doPassword (data) {
+  
+    if (isNaN(data)) {
+      warning.innerText = "Your character number must be a number"
+    } 
+    else if (data < 8) {
+      warning.innerText = "Your password cannot be fewer than 8 characters long."
     }
-    else if (getChars > 128) {
-      alert("Your password cannot be more than 128 characters long.")
+    else if (data > 128) {
+      warning.innerText = "Your password cannot be more than 128 characters long."
     }
     else {
-    alert("Your password is " + password.join(""));
+      result.innerHTML = `Your password is: ${password.join("")}`;
+      warning.innerText = ''
+      passparam.value = 'dropLtr'
     }
+    numChars.value = ''
+}
+
+function doSplit (chars, userchoice) {
+  password = []
+  for (i = 0; i < chars; i++) {
+    var split = userchoice.split('')
+    password.push(split[Math.floor(Math.random() * userchoice.length)])
   }
-  
-});
- 
+}
+
+function clearDivs () {
+  warning.innerText = ''
+  result.innerText = ''
+}

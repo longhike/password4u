@@ -1,14 +1,14 @@
-# hwThree
+# Password 4 U
 
-### Created on 6/2/2020
+### Created on 6/2/2020 (updated 9/14/2020)
 
-### By Sam Ascheim
+### By longhike
 
 ## Description:
 
-This is my first pass at a password generator, in which the user enters the number characters and their parameters and, when the "Generate Password" button is clicked, their generated password is alerted to the browser.
+This is a password generator that will generate a random string between 8 and 128 characters, given a set of entered parameters. 
 
-./assets/screenshot.png
+![main](./images/main.png)
 
 ## Set-up & Installation requirements:
 
@@ -20,7 +20,7 @@ No known bugs.
 
 ## Support & Contact details:
 
-e-mail sam.ascheim@gmail.com
+e-mail long.hike.dev@gmail.com
 
 ## Technologies Used
 
@@ -35,10 +35,10 @@ Javascript
 ## Contribution Guidlines 
 ​
 Direct link to site:
-https://longhike.github.io/hwThree/
+https://longhike.github.io/password4u/
 ​
 ### License
 ​
-Copyright(c) 2020 By Sam Ascheim
+Copyright(c) 2020 By longhike
 ​
 This software is licensed under MIT license.

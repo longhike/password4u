@@ -1,0 +1,39 @@
+html {
+    background-image: url("https://touchpoint.brownadvisory.com/brown-web/resources/images/loginFullBackground.jpg");
+    background-repeat: repeat;
+    background-size: 100% 100%;
+
+}
+
+body {
+    background: none;
+    text-align: center;
+}
+
+.card {
+    background-color: rgba(13, 13, 14, 0.3);
+    border: none;
+
+}
+
+.card-title {
+    color: white;
+}
+
+.card-text {
+    margin-top: 10px;
+}
+
+.container {
+    margin: 30px;
+    display: inline-block;
+}
+
+#warning {
+    color: red;
+}
+
+#_result {
+    color: white;
+    font-size: 18pt;
+}

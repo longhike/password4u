@@ -8,11 +8,11 @@
 
     <title>Password</title>
     <!-- css reset -->
-        <link rel="stylesheet" type="text/css" href="./reset.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <!-- bootstrap css/js/jquery  -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- css -->
-        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -20,16 +20,17 @@
     <div class="container">
 
         <div class="row">
+            <div class="col"></div>
 
-            <div class="col-md">
+            <div class="col-md-6">
 
                 <div class="card text-center">
 
                     <div class="card-body">
 
-                        <h1 class="card-title">Password Generator 4 U</h1>
+                        <h1 class="card-title">Password 4 U</h1>
 
-                        <h5>Enter the number of characters for your password:</h5>
+                        <h5 class="card-title">Enter the number of characters for your password:</h5>
                         
                         <form>
 
@@ -50,7 +51,7 @@
                             </div>
 
                         </form>
-                        <h5>Select your password's parameters using the dropdown below:</h5>
+                        <h5 class="card-title">Select your password's parameters using the dropdown below:</h5>
                         <form>    
                             <div class="form-group">
                                 <select class="form-control" id="_select">
@@ -77,11 +78,13 @@
 
             </div>
 
+            <div class="col"></div>
+
         </div>
 
     </div>
 
-<script src="./script.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 
 </html>

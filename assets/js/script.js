@@ -4,18 +4,13 @@ var choice = {
   letnum: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
   letnumchar: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?@#$%^&_"
 }
-
-// This is the global variable set with the different word parameters
-var choiceLtr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var choiceNum = "0123456789";
-var choiceLtrNum = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-var choiceLtrNumChar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?@#$%^&_";
-// This is the global variable set containing the input for the number of characters and the submit button
+// number of characters div
 var numChars = document.querySelector("#passLength");
-var submBtn = document.querySelector("#_submit");
-// This is the global variable containing the parameter drop-down
+// parameter div
 var passparam = document.getElementById("_select"); 
-
+// submit button div
+var submBtn = document.querySelector("#_submit");
+// hidden divs
 var warning = document.getElementById('warning')
 var result = document.getElementById('_result')
 
@@ -32,22 +27,18 @@ submBtn.addEventListener("click", function() {
   // if selection is letters only:
   if (getParam === "dropLtr") {
     doSplit(getChars, choice.letter)
-    console.log(password.join(""));
   }
   // if selection is numbers only:
   else if (getParam === "dropNum") {
     doSplit(getChars, choice.number)
-    console.log(password.join(""));
   }
   // if selection is letters and numbers:
   else if (getParam === "dropLtrNum") {
     doSplit(getChars, choice.letnum)
-    console.log(password.join(""));
   }
   // if the selection is letters, numbers and characters:
   else if (getParam === "dropLtrNumChar") {
     doSplit(getChars, choice.letnumchar)
-    console.log(password.join(""));
   }
   doPassword(getChars)
 });

@@ -30,7 +30,8 @@ body {
 }
 
 #warning {
-    color: red;
+    color: #FF0013;
+    font-weight: bold;
 }
 
 #_result {

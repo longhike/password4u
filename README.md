@@ -12,7 +12,9 @@ This is a password generator that will generate a random string between 8 and 12
 
 ## Set-up & Installation requirements:
 
-None needed besides an up-to-date web browser.
+Node.js 
+
+run `node server.js` or `npm start` in your terminal, and open your browser to the indicated localhost port.
 
 ## Known Bugs:
 
@@ -31,6 +33,10 @@ CSS
 Boostrap
 
 Javascript
+
+Node.js
+
+Express.js
 
 ## Contribution Guidlines 
 ​

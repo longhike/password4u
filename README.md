@@ -41,7 +41,7 @@ Express.js
 ## Contribution Guidlines 
 ​
 Direct link to site:
-https://longhike.github.io/password4u/
+http://password4u-env.eba-ybnfmahx.us-east-2.elasticbeanstalk.com/
 ​
 ### License
 ​
